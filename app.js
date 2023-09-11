@@ -7,15 +7,17 @@ const PORT = 5000;
 const db = require("./src/models/index");
 const User = db.user
 const adminItem = require('./src/constants/userAdmin')
+const uri = `mongodb+srv://tranvu221097:vMfXTuKD1bE4cWN7@server.ukormm7.mongodb.net/BookingApp?retryWrites=true&w=majority`
 
 db.mongoose
-  .connect("mongodb://127.0.0.1:27017/BookingApp", {
+  .connect(uri, {
     useNewUrlParser: true,
     useCreateIndex: true,
     useUnifiedTopology: true,
     useFindAndModify: false,
   })
   .then(async () => {
+    console.log("connected mongodb")
     try {
       const checkAdmin = await User.getUser({ username: "admin" });
       if (checkAdmin) return;
