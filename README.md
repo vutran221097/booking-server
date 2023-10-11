@@ -32,7 +32,8 @@ Technologies used: MongoDB, Express, ReactJS, NodeJS, React Router, Redux toolki
   - [x] Home page, Login/sign up page
   - [x] Hotel page by type, Hotel page by city
   - [x] Booking page, Transaction page,Checkout page
-  - [x] Show / hide room booked
+  - [x] Disable room booked
+  - [x] Search hotel by name and room available
   - [x] View all transactions history
 
 ### Admin App
